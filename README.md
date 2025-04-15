@@ -46,8 +46,8 @@ Dr. Alejandra Yep (yep@calpoly.edu)
 
 ## ✨ Stay Connected
 
-For more about the program, visit [Our Science. Nuestra Ciencia.](https://cosam.calpoly.edu/research-magazine/2024/nuestra-ciencia).  
-Or follow along on [Instagram](https://instagram.com/nuestra.ciencia).
+To learn more about the program, visit [Our Website](http://nuestraciencia.org/) or view our latest article in the Cal Poly **Bailey College of Science and Math** research magazine [Our Science, Nuestra Ciencia](https://cosam.calpoly.edu/research-magazine/2024/nuestra-ciencia).  
+You can also follow along on [Instagram](https://instagram.com/nuestra.ciencia).
 
 ---
 
