@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+        }
+        #menu a {
+            flex: 1;
+            padding: 14px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        #menu a:hover, #menu a.active {
+            background-color: #575757;
+        }
+        #content {
+            margin-top: 50px; /* Adjust based on menu height */
+            height: calc(100vh - 50px);
+        }
+    </style>
+    <script>
+        function highlightMenu(event) {
+            // Remove active class from all menu links
+            const links = document.querySelectorAll("#menu a");
+            links.forEach(link => link.classList.remove("active"));
+
+            // Add active class to the clicked link
+            event.target.classList.add("active");
+        }
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a href="about.html" target="content-frame" onclick="highlightMenu(event)">About</a>
+        <a href="activities.html" target="content-frame" onclick="highlightMenu(event)">Activities</a>
+        <a href="lessons.html" target="content-frame" onclick="highlightMenu(event)">Lessons</a>
+        <a href="faq.html" target="content-frame" onclick="highlightMenu(event)">FAQ</a>
+        <a href="contact.html" target="content-frame" onclick="highlightMenu(event)">Contact</a>
+    </div>
+    <iframe id="content" name="content-frame" src="about.html" frameborder="0" width="100%"></iframe>
+</body>
+</html>
