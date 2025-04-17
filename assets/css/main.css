@@ -9,24 +9,38 @@
 
 /**Alexi Added Here**/
 
-.logo-img,
-.logo-video {
-  transition: opacity 0.3s ease;
+.hover-translate {
+  position: relative;
+  display: inline-block;
 }
 
-h2:hover .logo-img {
+.hover-translate .spanish {
   opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: opacity 0.6s ease;
+  color: inherit;
 }
 
-h2:hover .logo-video {
+.hover-translate .english {
   opacity: 1;
-  pointer-events: auto;
+  transition: opacity 0.6s ease;
+  display: block;
+}
+
+.hover-translate:hover .english {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.hover-translate:hover .spanish {
+  opacity: 1;
+  transition-delay: 0.4s;
 }
 
 
-body {
-  font-family: "Nunito", sans-serif;
-}
 
 nav ul li a {
   position: relative;
