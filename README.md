@@ -41,6 +41,7 @@ Instagram ([@nuestra.ciencia](https://instagram.com/nuestra.ciencia))
 **Our Advisors:** <br>
 Dr. Jasmine Nation (jmnation@calpoly.edu) <br>
 Dr. Alejandra Yep (yep@calpoly.edu)
+Dr. Perla Ramos Carranza (pramosca@calpoly.edu)
 
 ---
 
