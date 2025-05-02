@@ -9,6 +9,11 @@
 
 /**Alexi Added Here**/
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+
 .hover-translate {
   position: relative;
   display: inline-block;
@@ -244,9 +249,9 @@ html {
 
 body {
   background: #f5f7fa;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
-  color: #52575c;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  color: #393c40;
   line-height: 1.75em;
   font-size: 14pt;
 }
@@ -3077,7 +3082,7 @@ button:hover,
     z-index: 10002;
     box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
     font-size: 1em;
-    background-color: #45474a;
+    background-color: #3A913F;
     background-size: 128px 128px, 100% 100%, 100% 100%;
   }
 
