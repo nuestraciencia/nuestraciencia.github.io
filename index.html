@@ -1,61 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Webpage</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        #menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #333;
-            display: flex;
-            padding: 0;
-            margin: 0;
-            z-index: 1000;
-        }
-        #menu a {
-            flex: 1;
-            padding: 14px 20px;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        #menu a:hover, #menu a.active {
-            background-color: #575757;
-        }
-        #content {
-            margin-top: 50px; /* Adjust based on menu height */
-            height: calc(100vh - 50px);
-        }
-    </style>
-    <script>
-        function highlightMenu(event) {
-            // Remove active class from all menu links
-            const links = document.querySelectorAll("#menu a");
-            links.forEach(link => link.classList.remove("active"));
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-            // Add active class to the clicked link
-            event.target.classList.add("active");
-        }
-    </script>
-</head>
-<body>
-    <div id="menu">
-        <a href="about.html" target="content-frame" onclick="highlightMenu(event)">About</a>
-        <a href="activities.html" target="content-frame" onclick="highlightMenu(event)">Activities</a>
-        <a href="lessons.html" target="content-frame" onclick="highlightMenu(event)">Lessons</a>
-        <a href="faq.html" target="content-frame" onclick="highlightMenu(event)">FAQ</a>
-        <a href="contact.html" target="content-frame" onclick="highlightMenu(event)">Contact</a>
+    <title>Nuestra Ciencia</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <div id="header-wrapper">
+        <div id="header" class="container">
+          <!-- Logo -->
+          <h1 id="logo"><a href="index.html">Nuestra Ciencia</a></h1>
+
+          <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li>
+                <a href="forteachers.html">For Teachers</a>
+                <ul>
+                  <li>
+                    <a href="forteachers.html">Join The Learn By Doing Lab</a>
+                  </li>
+                  <li><a href="resources.html">Classroom Resources</a></li>
+                </ul>
+              </li>
+              <li class="break"><a href="ourteam.html">Our Team</a></li>
+              <li>
+                <a href="research.html">Research</a>
+                <ul>
+                  <li>
+                    <a href="research.html">Our Research</a>
+                  </li>
+                  <li>
+                    <a href="publications.html"
+                      >Publications and Presentations</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Hero -->
+        <section id="hero" class="container">
+          <header>
+            <h2>
+              <img
+                src="images/ncLogo.png"
+                alt="Nuestra Ciencia logo"
+                style="height: 6em; vertical-align: middle; margin-left: 0.5em"
+              />
+            </h2>
+          </header>
+          <!-- VIDEO LOGO
+            <header>
+              <h2>
+                <video
+                  src="videos/ncLogo.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  style="height: 6em; vertical-align: middle; margin-left: 0.5em"
+                ></video>
+              </h2>
+            </header>
+          -->
+          <p>
+            A dynamic university–school partnership designed to demystify
+            microbiology, support bilingual classrooms, empower undergraduates,
+            and build connections.
+          </p>
+          <ul class="actions">
+            <li><a href="about.html" class="button">¡Adelante!</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Features 1 -->
+      <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <section class="col-6 col-12-narrower feature">
+              <div class="image-wrapper first">
+                <img src="Photos/cp.jpg" alt="" class="image featured first" />
+              </div>
+              <header>
+                <h2 style="color: #3a913f">Our Program</h2>
+              </header>
+              <p>
+                Nuestra Ciencia is a multidisciplinary research program
+                developed through a collaboration between the Liberal Studies
+                and Biology departments at Cal Poly, San Luis Obispo. Since its
+                launch in 2021, the program has fostered a strong, ongoing
+                partnership between the university and the local community,
+                growing steadily in both reach and impact.
+              </p>
+              <ul class="actions">
+                <li><a href="about.html" class="button">Conoce Más</a></li>
+              </ul>
+            </section>
+            <section class="col-6 col-12-narrower feature">
+              <div class="image-wrapper first">
+                <img
+                  src="Photos/IMG_2819.jpg"
+                  alt=""
+                  class="image featured first"
+                />
+              </div>
+              <header>
+                <h2 style="color: #3a913f">Our Students</h2>
+              </header>
+              <p>
+                Nuestra Ciencia focuses on the impact of bilingual microbiology
+                education on both K-12 students and Cal Poly undergraduates.
+                This initiative creates a unique opportunity to connect
+                undergraduate students as mentors for Latinx youth, fostering a
+                supportive peer-to-peer environment where all students can
+                learn, grow, and succeed.
+              </p>
+              <ul class="actions">
+                <li><a href="activities.html" class="button">Descubre Más</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo -->
+      <div id="promo-wrapper">
+        <section id="promo">
+          <h2
+            style="
+              font-size: 6vw;
+              max-width: 100%;
+              text-align: center;
+              margin: 0 auto;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            "
+          >
+            ¡Ciencia Es Para Todos!
+          </h2>
+        </section>
+      </div>
+
+      <!-- Features 2 -->
+      <div class="wrapper">
+        <section class="container">
+          <header class="major">
+            <h2 style="color: #db3a46">
+              Bringing Microbiology to Bilingual Classrooms
+            </h2>
+            <p style="font-size: 20px; color: #db3a46">
+              Changing the world by eliminating microbiology misconceptions...
+              one student at a time.
+            </p>
+          </header>
+          <div class="row features">
+            <section class="col-4 col-12-narrower feature">
+              <div class="image-wrapper first">
+                <img
+                  src="Photos/IMG_4429.jpg"
+                  alt=""
+                  class="image featured first"
+                />
+              </div>
+              <p>
+                Lessons on
+                <strong style="color: #db3a46">Food Safety</strong> make
+                students more confident when washing, chilling, separating, and
+                cooking food.
+              </p>
+            </section>
+            <section class="col-4 col-12-narrower feature">
+              <div class="image-wrapper first">
+                <img
+                  src="Photos/immunity2.jpg"
+                  alt=""
+                  class="image featured first"
+                />
+              </div>
+              <p>
+                Teaching about
+                <strong style="color: #db3a46"
+                  >Disease Transmission and Prevention</strong
+                >
+                equips students with the knowledge of how to protect themselves
+                and others by getting vaccinated.
+              </p>
+            </section>
+            <section class="col-4 col-12-narrower feature">
+              <div class="image-wrapper first">
+                <img
+                  src="Photos/DSC_0040.jpg"
+                  alt=""
+                  class="image featured first"
+                />
+              </div>
+              <p>
+                By underlining the importance of good
+                <strong style="color: #db3a46">Hand Washing</strong>, students
+                can better understand how to prevent the spread of germs and
+                bacteria.
+              </p>
+            </section>
+          </div>
+          <ul class="actions major">
+            <li><a href="#" class="button">Ver Nuestras Actividades</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer-wrapper" style="padding-top: 1em; padding-bottom: 1em">
+        <div id="footer" class="container">
+          <!-- Social icons and contact info -->
+          <div
+            id="social-icons"
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0px; /* Reduced margin-bottom */
+            "
+          >
+            <!-- Instagram icon with text -->
+            <div style="display: flex; align-items: center; margin: 0 10px">
+              <!-- Reduced margin -->
+              <i
+                class="icon brands fa-instagram"
+                style="font-size: 20px; color: #f49346"
+              ></i>
+              <span style="margin-left: 8px; font-size: 14px"
+                >@nuestra.ciencia</span
+              >
+              <!-- Reduced text size -->
+            </div>
+            <!-- Email icon with text -->
+            <div style="display: flex; align-items: center; margin: 0 10px">
+              <!-- Reduced margin -->
+              <i
+                class="icon fa fa-envelope"
+                style="font-size: 20px; color: #3a913f"
+              ></i>
+              <span style="margin-left: 8px; font-size: 14px"
+                >nuestraciencia@calpoly.edu</span
+              >
+              <!-- Reduced text size -->
+            </div>
+            <!-- YouTube icon with text -->
+            <div style="display: flex; align-items: center; margin: 0 10px">
+              <!-- Reduced margin -->
+              <i
+                class="icon brands fa-youtube"
+                style="font-size: 20px; color: #db3a46"
+              ></i>
+              <span style="margin-left: 8px; font-size: 14px"
+                >coming soon!</span
+              >
+              <!-- Reduced text size -->
+            </div>
+          </div>
+        </div>
+
+        <div id="copyright" class="container">
+          <ul class="menu" style="font-size: 10px">
+            <!-- Reduced font size for copyright -->
+            <li>&copy; Nuestra Ciencia. All rights reserved.</li>
+            <li>
+              Design:
+              <a
+                href="https://www.linkedin.com/in/alexi-ringler/"
+                style="font-size: 10px"
+                >Alexi Ringler</a
+              >
+              ('25) and
+              <a href="http://html5up.net" style="font-size: 10px">HTML5 UP</a>
+              <!-- Reduced font size for the design credit -->
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <iframe id="content" name="content-frame" src="about.html" frameborder="0" width="100%"></iframe>
-</body>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
