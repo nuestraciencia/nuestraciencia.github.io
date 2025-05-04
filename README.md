@@ -35,7 +35,7 @@ Whether you’re an educator, student, researcher, or curious visitor, we invite
 Want to contribute or get involved? We’re always excited to connect with collaborators passionate about science education, equity, and community engagement. Feel free to reach out to our team!
 
 **Our Students:** <br>
-Email (nuestracienciacp@gmail.com) <br>
+Email (nuestraciencia@calpoly.edu) <br>
 Instagram ([@nuestra.ciencia](https://instagram.com/nuestra.ciencia))
 
 **Our Advisors:** <br>
