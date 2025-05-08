@@ -357,7 +357,7 @@ hr {
 }
 
 blockquote {
-  border-left: solid 0.5em #c2c7cc;
+  border-left: solid 0.5em #3A913F;
   padding: 1em 0 1em 2em;
   font-style: italic;
 }
@@ -2311,6 +2311,25 @@ button:hover,
   padding: 6em 0 6em 0;
 }
 
+#promo-wrapper2 {
+  position: relative;
+  background-image: url("images/header.svg");
+  background-image: url("images/overlay.png"), url("images/header.svg"),
+    -moz-linear-gradient(75deg, #252F59 10%, #252F59 45%, #3A913F 90%);
+  background-image: url("images/overlay.png"), url("images/header.svg"),
+    -webkit-linear-gradient(75deg, #252F59 10%, #252F59 45%, #3A913F 90%);
+  background-image: url("images/overlay.png"), url("images/header.svg"),
+    -ms-linear-gradient(75deg, #252F59 10%, #252F59 45%, #3A913F 90%);
+  background-image: url("images/overlay.png"), url("images/header.svg"),
+    linear-gradient(75deg, #252F59 10%, #252F59 45%, #3A913F 90%);
+  background-size: 128px 128px, 100% 620%, auto;
+  background-position: top left, center center;
+  background-repeat: repeat, no-repeat, no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0 2em 0;
+}
+
 #footer-wrapper {
   -webkit-transform: translate3d(0, 0, 0);
   position: relative;
@@ -2557,7 +2576,7 @@ button:hover,
 /* Main */
 
 #main {
-  padding-bottom: 4em;
+  padding-bottom: 0em;
 }
 
 /* Sidebar */
