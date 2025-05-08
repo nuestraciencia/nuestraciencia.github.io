@@ -10,40 +10,36 @@
 /**Alexi Added Here**/
 
 .quote-slide {
-  margin: 0 auto;
   display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 700px;
+}
+
+.quote-slide span {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.9rem;
+  font-style: normal;
+  opacity: 0.8;
 }
 
 .quote-slide.active {
   display: block;
+  position: relative;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  padding: 0 10px;
-  cursor: pointer;
-  z-index: 10;
-  transition: background 0.3s ease;
-  border-radius: 8px;
-}
 
-.carousel-btn:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.carousel-btn.prev {
-  left: -40px;
-}
-
-.carousel-btn.next {
-  right: -40px;
-}
 
 h1,
 h2,
@@ -2284,7 +2280,7 @@ button:hover,
   position: relative;
   background: #fff;
   overflow-x: hidden;
-  padding: 6em 0 6em 0;
+  padding: 2em 0 2em 0;
 }
 
 .image-wrapper {
@@ -2690,7 +2686,7 @@ button:hover,
   }
 
   .homepage #header-wrapper {
-    padding: 8em 0 4em 0;
+    padding: 2em 0 2em 0;
   }
 
   #promo-wrapper {

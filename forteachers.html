@@ -272,108 +272,31 @@
         </div>
       </div>
 
-      <!-- Quote Carousel -->
       <div id="promo-wrapper2">
         <section
           id="promo"
           style="position: relative; max-width: 700px; margin: 0 auto"
         >
-          <!-- All quotes (only one will be shown at a time) -->
-          <blockquote
-            class="quote-slide active"
-            style="
-              background-color: rgba(255, 255, 255, 0.1);
-              padding: 20px;
-              border-radius: 10px;
-              font-size: 1.2rem;
-              font-style: italic;
-              color: #fff;
-              text-align: left;
-              line-height: 1.6;
-              margin: 1em auto;
-            "
-          >
+          <blockquote class="quote-slide active">
             “It is inspirational for my students to see the beauty of being
             bilingual; they are able to see college students speaking Spanish
             just as students do at school.”
-            <span
-              style="
-                display: block;
-                margin-top: 0.5em;
-                font-size: 0.9rem;
-                font-style: normal;
-                opacity: 0.8;
-              "
-            >
-              — Bilingual Teacher, Hapgood Elementary
-            </span>
+            <span>— Bilingual Teacher, Hapgood Elementary</span>
           </blockquote>
 
-          <blockquote
-            class="quote-slide"
-            style="
-              background-color: rgba(255, 255, 255, 0.1);
-              padding: 20px;
-              border-radius: 10px;
-              font-size: 1.2rem;
-              font-style: italic;
-              color: #fff;
-              text-align: left;
-              line-height: 1.6;
-              margin: 1em auto;
-              display: none;
-            "
-          >
+          <blockquote class="quote-slide">
             “For my students, it has been great to see themselves and the
             languages they speak in all of you who are leading the program. It
             is very impactful.”
-            <span
-              style="
-                display: block;
-                margin-top: 0.5em;
-                font-size: 0.9rem;
-                font-style: normal;
-                opacity: 0.8;
-              "
-            >
-              — Bilingual Teacher, Hapgood Elementary
-            </span>
+            <span>— Bilingual Teacher, Hapgood Elementary</span>
           </blockquote>
 
-          <blockquote
-            class="quote-slide"
-            style="
-              background-color: rgba(255, 255, 255, 0.1);
-              padding: 20px;
-              border-radius: 10px;
-              font-size: 1.2rem;
-              font-style: italic;
-              color: #fff;
-              text-align: left;
-              line-height: 1.6;
-              margin: 1em auto;
-              display: none;
-            "
-          >
+          <blockquote class="quote-slide">
             “Love to have had this opportunity to bring my classes. The lab
             coats were a perfect touch. The students really did take on the role
             of scientists!”
-            <span
-              style="
-                display: block;
-                margin-top: 0.5em;
-                font-size: 0.9rem;
-                font-style: normal;
-                opacity: 0.8;
-              "
-            >
-              — Bilingual Teacher, Georgia Brown Elementary
-            </span>
+            <span>— Bilingual Teacher, Georgia Brown Elementary</span>
           </blockquote>
-
-          <!-- Arrows -->
-          <button class="carousel-btn prev" onclick="changeQuote(-1)">‹</button>
-          <button class="carousel-btn next" onclick="changeQuote(1)">›</button>
         </section>
       </div>
 
@@ -463,18 +386,20 @@
       function showQuote(index) {
         quotes.forEach((quote, i) => {
           quote.classList.remove("active");
-          quote.style.display = "none";
         });
         quotes[index].classList.add("active");
-        quotes[index].style.display = "block";
       }
 
-      function changeQuote(direction) {
-        currentQuote += direction;
-        if (currentQuote < 0) currentQuote = quotes.length - 1;
-        if (currentQuote >= quotes.length) currentQuote = 0;
+      function cycleQuotes() {
+        currentQuote = (currentQuote + 1) % quotes.length;
         showQuote(currentQuote);
       }
+
+      // Start the rotation once the page is ready
+      window.addEventListener("DOMContentLoaded", () => {
+        showQuote(currentQuote); // show first one right away
+        setInterval(cycleQuotes, 10000); // change every 15 seconds
+      });
     </script>
   </body>
 </html>

@@ -251,44 +251,99 @@
                 </ul>
               </div>
             </div>
-            <p>
-              2025 Bailey College Of Science and Math (BCSM) Conference Poster
-            </p>
-            <img
-              src="Photos/poster.jpg"
-              alt="Nuestra Ciencia logo"
-              style="
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto 30px auto;
-                border-radius: 8px;
-              "
-            />
-
-            <p>2024 BCSM Conference Poster</p>
-            <img
-              src="Photos/poster2.jpg"
-              alt="Nuestra Ciencia logo"
-              style="
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto 30px auto;
-                border-radius: 8px;
-              "
-            />
-
-            <ul class="actions major" style="margin-bottom: 0">
-              <li>
-                <a href="publications.html" class="button"
-                  >Explorar Nuestras Publicaciones</a
-                >
-              </li>
-            </ul>
           </article>
+        </div>
+      </div>
+
+      <div id="promo-wrapper2">
+        <section
+          id="promo"
+          style="position: relative; max-width: 700px; margin: 0 auto"
+        >
+          <blockquote class="quote-slide active">
+            "Nuestra Ciencia healed the little girl in me that didn't get
+            science.”
+            <span>— Undergraduate student</span>
+          </blockquote>
+
+          <blockquote class="quote-slide active">
+            "Nuestra Ciencia has made me want to continue educating myself about
+            science. I want to be able to reach out to those students who don’t
+            grow up speaking English as their as their first language and share
+            science with them too.”
+            <span>— Undergraduate student</span>
+          </blockquote>
+
+          <blockquote class="quote-slide">
+            “It was very rewarding to teach the kids in their home language,
+            because I when I moved to the US and didn't know any English it was
+            really hard. I hope these kids relate to me and see that I'm in
+            college so maybe that's something they could do too.”
+            <span>— Undergraduate student</span>
+          </blockquote>
+
+          <blockquote class="quote-slide">
+            “Personally, teaching science lessons in Spanish allowed me to feel
+            more connected to my home language, cause it felt right, it felt
+            comfortable. I was excited that I was able to teach in the same
+            language that I spoke for the first six years of my life.”
+            <span>— Undergraduate student</span>
+          </blockquote>
+
+          <blockquote class="quote-slide">
+            “I feel the students got a glimpse that Spanish continues and
+            thrives beyond the walls of their home and classroom and that they,
+            much like Spanish, have a place in our country and community.”
+            <span>— Undergraduate student</span>
+          </blockquote>
+
+          <blockquote class="quote-slide">
+            "I always knew I wanted to teach, but after being able to teach in
+            Spanish I think thats going to be something I definitely want to do!
+            I love seeing their faces and having conversations in our language
+            together.”
+            <span>— Undergraduate student</span>
+          </blockquote>
+        </section>
+      </div>
+
+      <!-- Full-Width Poster Section -->
+      <div class="wrapper">
+        <div class="container" id="poster-gallery">
+          <p style="text-align: left">
+            <strong
+              >2025 Bailey College Of Science and Math (BCSM) Conference
+              Poster</strong
+            >
+          </p>
+          <img
+            src="Photos/poster.jpg"
+            alt="2025 BCSM Poster"
+            style="
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+              display: block;
+              margin: 0 auto 30px auto;
+              border-radius: 8px;
+            "
+          />
+
+          <p style="text-align: left">
+            <strong>2024 BCSM Conference Poster</strong>
+          </p>
+          <img
+            src="Photos/poster2.jpg"
+            alt="2024 BCSM Poster"
+            style="
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+              display: block;
+              margin: 0 auto 30px auto;
+              border-radius: 8px;
+            "
+          />
         </div>
       </div>
 
@@ -302,7 +357,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              margin-bottom: -30px; /* Reduced margin-bottom */
+              margin-bottom: 0px; /* Reduced margin-bottom */
             "
           >
             <!-- Instagram icon with text -->
@@ -323,7 +378,6 @@
               <i
                 class="icon fa fa-envelope"
                 style="font-size: 20px; color: #3a913f"
-                4
               ></i>
               <span style="margin-left: 8px; font-size: 14px"
                 >nuestraciencia@calpoly.edu</span
@@ -344,7 +398,6 @@
             </div>
           </div>
         </div>
-
         <div id="copyright" class="container">
           <ul class="menu" style="font-size: 10px">
             <!-- Reduced font size for copyright -->
@@ -372,5 +425,27 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      let currentQuote = 0;
+      const quotes = document.querySelectorAll(".quote-slide");
+
+      function showQuote(index) {
+        quotes.forEach((quote, i) => {
+          quote.classList.remove("active");
+        });
+        quotes[index].classList.add("active");
+      }
+
+      function cycleQuotes() {
+        currentQuote = (currentQuote + 1) % quotes.length;
+        showQuote(currentQuote);
+      }
+
+      // Start the rotation once the page is ready
+      window.addEventListener("DOMContentLoaded", () => {
+        showQuote(currentQuote); // show first one right away
+        setInterval(cycleQuotes, 10000); // change every 10 seconds
+      });
+    </script>
   </body>
 </html>
