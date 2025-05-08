@@ -95,10 +95,15 @@
         </div>
       </div>
 
-      <!-- Quote -->
+      <!-- Quote Carousel -->
       <div id="promo-wrapper2">
-        <section id="promo">
+        <section
+          id="promo"
+          style="position: relative; max-width: 700px; margin: 0 auto"
+        >
+          <!-- All quotes (only one will be shown at a time) -->
           <blockquote
+            class="quote-slide active"
             style="
               background-color: rgba(255, 255, 255, 0.1);
               padding: 20px;
@@ -106,16 +111,14 @@
               font-size: 1.2rem;
               font-style: italic;
               color: #fff;
-              max-width: 700px;
-              margin: 1em auto;
               text-align: left;
               line-height: 1.6;
+              margin: 1em auto;
             "
           >
-            “All the students were excited to participate in the discussion.
+            “All of my students were excited to participate in the discussion.
             The students that tend to not get engaged in the classroom were on
             task and engaged. They loved it! I saw it on their faces.”
-            <br />
             <span
               style="
                 display: block;
@@ -128,6 +131,72 @@
               — Bilingual Teacher, Jiménez Elementary
             </span>
           </blockquote>
+
+          <blockquote
+            class="quote-slide"
+            style="
+              background-color: rgba(255, 255, 255, 0.1);
+              padding: 20px;
+              border-radius: 10px;
+              font-size: 1.2rem;
+              font-style: italic;
+              color: #fff;
+              text-align: left;
+              line-height: 1.6;
+              margin: 1em auto;
+              display: none;
+            "
+          >
+            “I love to see my students involved in this Nuestra Ciencia program;
+            I enjoy seeing them truly engaged and talking with the undergaduate
+            students about their experience at Cal Poly.”
+            <span
+              style="
+                display: block;
+                margin-top: 0.5em;
+                font-size: 0.9rem;
+                font-style: normal;
+                opacity: 0.8;
+              "
+            >
+              — Bilingual Teacher, Hapgood Elementary
+            </span>
+          </blockquote>
+
+          <blockquote
+            class="quote-slide"
+            style="
+              background-color: rgba(255, 255, 255, 0.1);
+              padding: 20px;
+              border-radius: 10px;
+              font-size: 1.2rem;
+              font-style: italic;
+              color: #fff;
+              text-align: left;
+              line-height: 1.6;
+              margin: 1em auto;
+              display: none;
+            "
+          >
+            “It is obvious that a lot of thought and preparation went into
+            creating these labs. The students also connected well and felt
+            generally comfortable with the lab leaders."”
+            <span
+              style="
+                display: block;
+                margin-top: 0.5em;
+                font-size: 0.9rem;
+                font-style: normal;
+                opacity: 0.8;
+              "
+            >
+              — Bilingual Teacher, Hapgood Elementary
+            </span>
+          </blockquote>
+
+          <!-- Arrows -->
+          <button class="carousel-btn prev" onclick="changeQuote(-1)">‹</button>
+          <button class="carousel-btn next" onclick="changeQuote(1)">›</button>
         </section>
       </div>
 
@@ -210,5 +279,25 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      let currentQuote = 0;
+      const quotes = document.querySelectorAll(".quote-slide");
+
+      function showQuote(index) {
+        quotes.forEach((quote, i) => {
+          quote.classList.remove("active");
+          quote.style.display = "none";
+        });
+        quotes[index].classList.add("active");
+        quotes[index].style.display = "block";
+      }
+
+      function changeQuote(direction) {
+        currentQuote += direction;
+        if (currentQuote < 0) currentQuote = quotes.length - 1;
+        if (currentQuote >= quotes.length) currentQuote = 0;
+        showQuote(currentQuote);
+      }
+    </script>
   </body>
 </html>
