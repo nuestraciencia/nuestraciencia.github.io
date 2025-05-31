@@ -102,5 +102,3 @@ If you’re ever unsure:
 You got this! 🌟  
 
 ---
- 
-*Nuestra Ciencia 2021–2025*
